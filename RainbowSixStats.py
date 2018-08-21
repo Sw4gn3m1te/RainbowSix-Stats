@@ -6,7 +6,7 @@ import r6sapi as api
 
 class Ui_Form(object):
     
-    def __init__(email, pw):
+    def __init__(self, email, pw):
         self.your_email = email
         self.your_pw = pw
         
