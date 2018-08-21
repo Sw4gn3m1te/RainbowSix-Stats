@@ -5,6 +5,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import r6sapi as api
 
 class Ui_Form(object):
+    
+    def __init__(email, pw):
+        self.your_email = email
+        self.your_pw = pw
+        
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(1516, 695)
@@ -5910,7 +5915,7 @@ class Ui_Form(object):
 
         player_name = str(player_name)
         self.label_progress.setText("connecting to api..")
-        auth = api.Auth("Botmail_{}@web.de".format(random.randint(1, 10)), "IstDaMulmDrinn")
+        auth = api.Auth(self.your_email, self.your_pw)
         self.progressBar.setValue(self.progressBar.value() + 2)
         try:
             self.label_progress.setText("loading player information..")
@@ -6104,7 +6109,7 @@ class Ui_Form(object):
 import sys
 app = QtWidgets.QApplication(sys.argv)
 Dialog = QtWidgets.QDialog()
-ui = Ui_Form()
+ui = Ui_Form("example420@example.com" "NoScope1337")
 ui.setupUi(Dialog)
 Dialog.show()
 sys.exit(app.exec_())
