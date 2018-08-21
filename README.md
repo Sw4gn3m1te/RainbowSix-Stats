@@ -1,3 +1,5 @@
 # RainbowSix-Stats
 
-just a little programm so you can gather some information about players in RainbowSixSiege
+just some little programm so you can gather some information about players in RainbowSixSiege
+make sure you enter your uplay login credentials in line 6112:
+Here -> ui = Ui_Form("your email" "your password") <-Here (dont remove the " email and pw must me string!)
